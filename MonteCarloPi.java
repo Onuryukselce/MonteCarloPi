@@ -1,7 +1,9 @@
+package MonteCarloPi;
+
 public class MonteCarloPi {
 
     public static void main(String... args) {
-        System.out.println(calculatePi(10000000L));
+        System.out.println(calculatePi(100000000L));
     }
 
     private static double calculatePi(long dots) {
@@ -9,12 +11,12 @@ public class MonteCarloPi {
         double y = 0;
         long inCircleCounter = 0;
         for (long i = 0; i < dots; i++) {
-            x = Math.random() * 2 - 1;
-            y = Math.random() * 2 - 1;
+            x = Math.random();
+            y = Math.random();
             if (Math.pow(x, 2) + Math.pow(y, 2) <= 1)
                 inCircleCounter++;
-            System.out.print(inCircleCounter);
-            System.out.print("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+            // System.out.print(inCircleCounter);
+            // System.out.print("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
 
         }
         System.out.println("ic : " + inCircleCounter);
